@@ -8,11 +8,9 @@
   <body id="page-top">
     <% # binding.pry %>
     <% if Helpers.is_logged_in?(session) %>
-      <h1> Welcome <%= Helpers.current_user(session).username %> </h1>
-      Your Balance: <%= Helpers.current_user(session).balance %> 
-      <input type="submit" value="Log Out">
-    <% else %>
-      <% redirect to '/error' %>
+      <h1>Welcome <%= Helpers.current_user(session).username %></h1>
+      <h3>Your Balance: <%= Helpers.current_user(session).balance %></h3>
+      <h4><input type="submit" value="Log Out"></h4>
     <% end %>
     
 
